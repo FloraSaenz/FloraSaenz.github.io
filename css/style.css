@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+/* Sets overall page appearance */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../images/texture.jpg");
+    color: #311432;
+    line-height: 1.6;
+}
+
+/* Header */
+/*Styling top section of page*/
+header {
+    background-image: url("../images/texture2.jpg");
+    background-repeat: repeat;
+    background: #81007f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation */
+/*Styling menu links*/
+nav ul {
+    list-style: none;           /*Removes bullet pts*/
+    display: flex;              /*Flexbox layout*/
+    justify-content: center;    /*Centered horizontally*/
+    margin-top: 10px;           /*Spacing above*/
+}
+
+nav ul li {
+    margin: 0 15px;     /*Spacing between menu items*/
+}
+
+nav ul li a {
+    color: white;           /*Color of text*/
+    text-decoration: none;    /*No text deco. No underline.*/
+    font-weight: bold;        /*Bold*/
+}
+
+nav ul li a:hover {
+    color: #ff007f;         /*Hover effect*/
+}
+
+/* Main Content */
+/* Wraps the main page content */
+.content {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Images */
+
+/* Profile image styling */
+.profile-pic {
+    width: 300px;
+    border-radius: 0%;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+/* Project image styling */
+.project-img {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 6px;
+}
+
+/* Project video styling */
+.project-video {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Movie Card Layout */
+/* Displays movie poster and description side-by-side */
+.movie-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+/* Movie poster image */
+.movie-poster {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Movie description area */
+.movie-description {
+    flex: 1;
+}
+
+/* Space below paragraphs */
+p {
+    margin-bottom: 20px;
+}
+
+/* Space above and below headings*/
+h2, h3, h4 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    background: #c64b8c;
+    color: white;
+}
+
+/*Responsive design*/
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .profile-pic {
+        width: 150px;
+    }
+
+    .movie-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
