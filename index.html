@@ -2,44 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flora Saenz's personal portfolio showcasing art, film, and computer science.">
     <title>Flora Saenz | Home</title>
     <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
-<header>
-    <h1>Flora's Corner: Personal Website</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="art.html">My Art</a></li>
-            <li><a href="movies.html">Movies</a></li>
-            <li><a href="csci.html">Computer Science</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+<header class="site-header">
+    <div class="header-inner">
+        <a href="index.html" class="site-title">Flora Saenz</a>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="animation.html">Art & Animation</a></li>
+                <li><a href="film.html">Film</a></li>
+                <li><a href="csci.html">Computer Science</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<main class="content">
-    <img src="images/FMST.JPEG" alt="Profile Photo" class="profile-pic">
-    <h2>Welcome!</h2>
-    <p>
-        My name is Flora and I am currently pursuing a Computer Science master's degree after earning my
-        Bachelor's in 3D Animation & VFX with a minor on Digital Filmmaking. In short, 
-        I love to create, and I am hoping to broaden my technical expertise so that I can 
-        combine it with artistic creativity! 
-    </p>
-    <p>
+<main>
+    <section class="bio-section">
+        <div class="bio-image">
+            <img
+                src="images/FS_ProfilePicture.jpg"
+                alt="Portrait of Flora Saenz"
+                class="profile-pic"
+            >
+        </div>
 
-        This website showcases some of my favorite projects and interests including digital
-        art, movies I enjoy, and programming work. Switch through the tabs above to see what I'm up to!
-    </p>
+        <div class="bio-content">
+            <p class="eyebrow">ANIMATION AND COMPUTER SCIENCE</p>
+
+            <h1>Hello, I'm Flora.</h1>
+
+            <p class="bio-intro">
+                I'm a creative technologist with a background in 3D Animation
+                and Visual Effects, currently pursuing a master's degree
+                in Computer Science.
+            </p>
+
+            <p>
+                After earning my bachelor's degree in 3D Animation &amp; VFX
+                with a minor in Digital Filmmaking, I'm working to expand my
+                technical expertise and bring together my passions for
+                artistic creativity and technology.
+            </p>
+
+            <p>
+                This website is a collection of the things that inspire me,
+                from digital art and film to programming projects.
+                Explore my work and discover what I'm creating!
+            </p>
+
+            <a href="contact.html" class="contact-link">Get in touch &rarr;</a>
+        </div>
+    </section>
 </main>
 
-<footer>
-    <p>#CoolestWebsiteEver</p>
-</footer>
 
 </body>
 </html>
