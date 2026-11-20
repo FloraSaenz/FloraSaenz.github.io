@@ -1,855 +1,6 @@
-/* ------------------------------
-   Global Styles
------------------------------- */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --purple: #69005f;
-    --deep-purple: #311432;
-    --pink: #d95b9b;
-    --light-pink: #f9edf5;
-    --text: #49404b;
-    --white: #ffffff;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #faf0e6;
-    /*background-image: url("../images/texture.jpg");*/
-    background-attachment: fixed;
-    color: var(--text);
-    line-height: 1.8;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* ------------------------------
-   Header & Navigation
------------------------------- */
-
-.site-header {
-    background: var(--purple);
-    background-color: #b22222;
-    /*background-image: url("../images/texture2.jpg");*/
-    background-blend-mode: multiply;
-    color: var(--white);
-    padding: 20px 6%;
-}
-
-.header-inner {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-}
-
-.site-title {
-    color: var(--white);
-    text-decoration: none;
-    font-size: 1.6rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    white-space: nowrap;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: 10px 28px;
-}
-
-nav ul li a {
-    color: #ffe4e1;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: color 0.2s ease;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-    color: #ffbf00;
-}
-
-/* ------------------------------
-   Horizontal Biography
------------------------------- */
-
-main {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 65px 6%;
-}
-
-.bio-section {
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: clamp(35px, 6vw, 90px);
-    padding: 45px;
-    background: rgba(255, 255, 255, 0.96);
-    border: 1px solid #f0e3ed;
-    border-radius: 18px;
-    box-shadow: 0 12px 40px rgba(64, 24, 58, 0.08);
-}
-
-/* Photo column */
-
-.bio-image {
-    flex: 0 0 36%;
-    max-width: 400px;
-}
-
-.profile-pic {
-    display: block;
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 12px;
-}
-
-/* Biography column */
-
-.bio-content {
-    flex: 1;
-    min-width: 0;
-}
-
-.eyebrow {
-    margin-bottom: 12px;
-    color: var(--pink);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    line-height: 1.6;
-}
-
-.bio-content h1 {
-    color: var(--deep-purple);
-    font-size: clamp(2.4rem, 4vw, 3.8rem);
-    line-height: 1.15;
-    letter-spacing: -1.5px;
-    margin-bottom: 25px;
-}
-
-.bio-content p {
-    margin-bottom: 18px;
-    font-size: 1rem;
-}
-
-.bio-content .bio-intro {
-    color: var(--deep-purple);
-    font-size: 1.2rem;
-    font-weight: 500;
-    line-height: 1.7;
-}
-
-/* Interest tags */
-
-.interest-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 25px 0;
-}
-
-.interest-tags span {
-    display: inline-block;
-    padding: 7px 13px;
-    background: var(--light-pink);
-    color: var(--purple);
-    border-radius: 30px;
-    font-size: 0.82rem;
-    font-weight: 600;
-}
-
-/* Contact link */
-
-.contact-link {
-    display: inline-block;
-    color: var(--purple);
-    font-weight: 700;
-    text-decoration: none;
-    border-bottom: 2px solid var(--pink);
-    padding-bottom: 3px;
-    transition: color 0.2s ease;
-}
-
-.contact-link:hover {
-    color: var(--pink);
-}
-
-/* ------------------------------
-   Footer
------------------------------- */
-
-footer {
-    text-align: center;
-    padding: 22px 20px;
-    color: #f9eaf5;
-    background: var(--purple);
-    font-size: 0.9rem;
-}
-
-footer p {
-    margin: 0;
-}
-
-footer span {
-    color: #ffadd8;
-}
-
-/* ------------------------------
-   Responsive Design
------------------------------- */
-
-@media (max-width: 900px) {
-    .header-inner {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav ul {
-        justify-content: center;
-        gap: 10px 20px;
-    }
-
-    main {
-        padding: 35px 4%;
-    }
-
-    .bio-section {
-        gap: 30px;
-        padding: 30px;
-    }
-
-    .bio-image {
-        flex-basis: 34%;
-    }
-
-    .bio-content h1 {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 600px) {
-    main {
-        padding: 20px 15px;
-        align-items: flex-start;
-    }
-
-    .bio-section {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 28px;
-        padding: 22px;
-        border-radius: 14px;
-    }
-
-    .bio-image {
-        flex: auto;
-        width: 100%;
-        max-width: 280px;
-        margin: 0 auto;
-    }
-
-    .profile-pic {
-        aspect-ratio: 4 / 4;
-        border-radius: 10px;
-    }
-
-    .bio-content h1 {
-        font-size: 2.3rem;
-        margin-bottom: 18px;
-    }
-
-    .bio-content .bio-intro {
-        font-size: 1.05rem;
-    }
-
-    .eyebrow {
-        font-size: 0.7rem;
-        letter-spacing: 1.4px;
-    }
-
-    nav ul {
-        gap: 8px 16px;
-    }
-
-    nav ul li a {
-        font-size: 0.9rem;
-    }
-}
-
-/* Contact Page */
-
-.contact-main {
-    flex: 1;
-    width: 100%;
-    min-height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 20px;
-}
-
-.contact-card {
-    width: 100%;
-    max-width: 700px;
-    padding: 45px;
-    background: rgba(255, 255, 255, 0.96);
-    border: 1px solid #f0e3ed;
-    border-radius: 18px;
-    box-shadow: 0 12px 40px rgba(64, 24, 58, 0.08);
-    text-align: center;
-}
-
-.contact-card .eyebrow {
-    color: #d95b9b;
-    font-size: 0.8rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.contact-card h1 {
-    color: #311432;
-    font-size: 2.5rem;
-    line-height: 1.2;
-    margin-bottom: 15px;
-}
-
-.contact-intro {
-    color: #49404b;
-    margin-bottom: 30px;
-}
-
-.contact-details {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    text-align: left;
-}
-
-.contact-item {
-    padding: 17px 10px;
-    border-bottom: 1px solid #f0e3ed;
-}
-
-.contact-item:last-child {
-    border-bottom: none;
-}
-
-.contact-item h2 {
-    color: #69005f;
-    font-size: 0.9rem;
-    margin: 0 0 4px;
-}
-
-.contact-item p {
-    color: #49404b;
-    margin: 0;
-    overflow-wrap: anywhere;
-}
-
-.contact-item a {
-    color: #69005f;
-    text-decoration: none;
-}
-
-.contact-item a:hover {
-    color: #d95b9b;
-    text-decoration: underline;
-}
-
-/* Mobile adjustments */
-
-@media (max-width: 600px) {
-    .contact-main {
-        padding: 25px 15px;
-    }
-
-    .contact-card {
-        padding: 28px 20px;
-    }
-
-    .contact-card h1 {
-        font-size: 2rem;
-    }
-}
-
-/* =================================
-   Art & Animation Portfolio
-================================= */
-
-.portfolio-main {
-    display: block;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 60px 6%;
-}
-
-/* Introduction */
-
-.portfolio-intro {
-    max-width: 850px;
-    margin: 0 auto 55px;
-    text-align: center;
-}
-
-.portfolio-intro .eyebrow {
-    color: #d95b9b;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.portfolio-intro h1 {
-    color: #311432;
-    font-size: clamp(2.5rem, 5vw, 3.8rem);
-    line-height: 1.2;
-    margin: 0 0 22px;
-    letter-spacing: -1.5px;
-}
-
-.portfolio-intro p {
-    color: #49404b;
-    font-size: 1.05rem;
-    margin-bottom: 16px;
-}
-
-/* Project list */
-
-.project-list {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-/* Horizontal project card */
-
-.art-project {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 40px;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.96);
-    border: 1px solid #f0e3ed;
-    border-radius: 16px;
-    box-shadow: 0 8px 28px rgba(64, 24, 58, 0.06);
-    transition: box-shadow 0.25s ease,
-                transform 0.25s ease;
-}
-
-.art-project:hover {
-    box-shadow: 0 14px 35px rgba(64, 24, 58, 0.11);
-    transform: translateY(-2px);
-}
-
-/* Media column */
-
-.project-media {
-    flex: 0 0 44%;
-    min-width: 0;
-}
-
-.project-media img,
-.project-media video {
-    display: block;
-    width: 100%;
-    max-height: 460px;
-    object-fit: contain;
-    border-radius: 10px;
-    background: #f8f3f7;
-}
-
-.project-media img {
-    height: auto;
-}
-
-/* Description column */
-
-.project-info {
-    flex: 1;
-    min-width: 0;
-}
-
-.project-category {
-    color: #d95b9b;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    margin-bottom: 10px;
-}
-
-.project-info h2 {
-    color: #311432;
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    line-height: 1.25;
-    margin: 0 0 18px;
-}
-
-.project-info p {
-    color: #49404b;
-    font-size: 1rem;
-    margin-bottom: 16px;
-}
-
-.project-info .project-tools {
-    display: inline-block;
-    margin-top: 5px;
-    margin-bottom: 0;
-    padding: 8px 12px;
-    background: #f9edf5;
-    color: #69005f;
-    border-radius: 6px;
-    font-size: 0.82rem;
-    font-weight: 600;
-}
-
-/* Tablet */
-
-@media (max-width: 900px) {
-    .portfolio-main {
-        padding: 40px 4%;
-    }
-
-    .art-project {
-        gap: 25px;
-        padding: 24px;
-    }
-
-    .project-media {
-        flex-basis: 42%;
-    }
-
-    .project-info h2 {
-        font-size: 1.7rem;
-    }
-}
-
-/* Mobile */
-
-@media (max-width: 650px) {
-    .portfolio-main {
-        padding: 30px 16px;
-    }
-
-    .portfolio-intro {
-        margin-bottom: 35px;
-    }
-
-    .portfolio-intro h1 {
-        font-size: 2.4rem;
-    }
-
-    .portfolio-intro p {
-        font-size: 0.98rem;
-    }
-
-    .project-list {
-        gap: 22px;
-    }
-
-    .art-project {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 22px;
-        padding: 18px;
-    }
-
-    .project-media {
-        flex: auto;
-        width: 100%;
-    }
-
-    .project-media img,
-    .project-media video {
-        max-height: 400px;
-    }
-
-    .project-info h2 {
-        font-size: 1.7rem;
-    }
-}
-
-/* =================================
-   Computer Science Portfolio
-================================= */
-
-.cs-project-list {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 100%;
-}
-
-/* Project Card */
-
-.cs-project {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.96);
-    border: 1px solid #f0e3ed;
-    border-radius: 16px;
-    box-shadow: 0 8px 28px rgba(64, 24, 58, 0.06);
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.2s ease,
-                box-shadow 0.2s ease,
-                border-color 0.2s ease;
-}
-
-.cs-project:hover {
-    transform: translateY(-3px);
-    border-color: #d95b9b;
-    box-shadow: 0 14px 35px rgba(64, 24, 58, 0.12);
-}
-
-.cs-project:focus-visible {
-    outline: 3px solid #d95b9b;
-    outline-offset: 4px;
-}
-
-/* Graphic */
-
-.cs-project-icon {
-    flex: 0 0 120px;
-    width: 120px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #311432;
-    border-radius: 14px;
-    overflow: hidden;
-}
-
-.cs-project-icon img {
-    display: block;
-    width: 65px;
-    height: 65px;
-    object-fit: contain;
-}
-
-/* Project Details */
-
-.cs-project-info {
-    flex: 1;
-    min-width: 0;
-}
-
-.cs-project-info .project-category {
-    color: #d95b9b;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    line-height: 1.5;
-    margin: 0 0 8px;
-}
-
-.cs-project-info h2 {
-    color: #311432;
-    font-size: 1.8rem;
-    line-height: 1.3;
-    margin: 0 0 10px;
-}
-
-.cs-project-info > p:not(.project-category):not(.github-cta) {
-    color: #49404b;
-    font-size: 1rem;
-    line-height: 1.8;
-    margin: 0 0 14px;
-}
-
-.cs-project-info .project-tools {
-    display: inline-block;
-    padding: 7px 12px;
-    background: #f9edf5;
-    color: #69005f;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    line-height: 1.5;
-    margin-bottom: 14px;
-}
-
-/* GitHub Call to Action */
-
-.cs-project-info .github-cta {
-    display: block;
-    color: #69005f;
-    font-weight: 700;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin: 0;
-    transition: color 0.2s ease;
-}
-
-.cs-project:hover .github-cta {
-    color: #d95b9b;
-}
-
-/* Tablet */
-
-@media (max-width: 900px) {
-    .cs-project {
-        gap: 24px;
-        padding: 24px;
-    }
-
-    .cs-project-icon {
-        flex-basis: 100px;
-        width: 100px;
-        height: 100px;
-    }
-
-    .cs-project-icon img {
-        width: 58px;
-        height: 58px;
-    }
-
-    .cs-project-info h2 {
-        font-size: 1.6rem;
-    }
-}
-
-/* Mobile */
-
-@media (max-width: 600px) {
-    .cs-project {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-        padding: 22px;
-    }
-
-    .cs-project-icon {
-        flex: 0 0 85px;
-        width: 85px;
-        height: 85px;
-    }
-
-    .cs-project-icon img {
-        width: 48px;
-        height: 48px;
-    }
-
-    .cs-project-info {
-        width: 100%;
-    }
-
-    .cs-project-info h2 {
-        font-size: 1.5rem;
-    }
-}
-
-/* Homepage bio links */
-.bio-links {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 24px;
-    margin-top: 24px;
-}
-
-.bio-links .contact-link,
-.bio-links .resume-link {
-    display: inline-block;
-    color: var(--purple);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.8;
-    text-decoration: none;
-    border-bottom: 2px solid var(--pink);
-    padding-bottom: 3px;
-    transition: color 0.2s ease;
-}
-
-.bio-links .contact-link:hover,
-.bio-links .resume-link:hover {
-    color: var(--pink);
-}
-
-/* Custom resume page appearance */
-
-.resume-main {
-    display: block;
-    padding: 45px 6%;
-}
-
-.resume-viewer {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.resume-toolbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 28px;
-}
-
-.resume-toolbar h1 {
-    color: #311432;
-    font-size: 2.4rem;
-}
-
-.resume-download {
-    color: #69005f;
-    font-weight: 700;
-    text-decoration: none;
-    border-bottom: 2px solid #d95b9b;
-}
-
-.resume-pdf {
-    display: block;
-    width: 100%;
-    height: 85vh;
-    min-height: 600px;
-    border: none;
-    border-radius: 12px;
-    background: #faf0e6;
-    box-shadow: 0 10px 35px rgba(49, 20, 50, 0.12);
-}
-
-
 /* ==========================================
-   NEW HOMEPAGE: PLAYFUL GEOMETRIC PORTFOLIO
+   1. GLOBAL STYLES & COLOR PALETTE
 ========================================== */
-
-/* Color palette */
 
 :root {
     --cream: #fff6e9;
@@ -863,18 +14,42 @@ footer span {
     --yellow: #ffd447;
     --turquoise: #39c6c2;
     --cobalt: #4267d5;
+    --white: #ffffff;
 }
 
-/* Overall page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: var(--cream);
     color: var(--plum);
-    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+main {
+    flex: 1;
+    width: 100%;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+
 /* ==========================================
-   HEADER
+   2. HEADER & NAVIGATION
 ========================================== */
 
 .site-header {
@@ -889,12 +64,19 @@ body {
 
 .header-inner {
     max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
 }
 
 .site-title {
     color: var(--plum);
+    text-decoration: none;
     font-size: 1.7rem;
     font-weight: 800;
+    white-space: nowrap;
 }
 
 .site-title span {
@@ -902,13 +84,20 @@ body {
 }
 
 nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
     gap: 10px 25px;
 }
 
 nav ul li a {
     color: var(--plum);
+    text-decoration: none;
     font-size: 0.9rem;
     font-weight: 700;
+    transition: color 0.2s ease;
 }
 
 nav ul li a:hover,
@@ -916,30 +105,26 @@ nav ul li a.active {
     color: var(--hot-pink);
 }
 
+
 /* ==========================================
-   HOMEPAGE LAYOUT
+   3. HOMEPAGE
 ========================================== */
 
 .home-main {
     display: block;
     width: 100%;
     padding: 0;
-    flex: 1;
 }
 
-/* ==========================================
-   HERO SECTION
-========================================== */
+/* Hero Section */
 
 .home-hero {
     position: relative;
     isolation: isolate;
     overflow: hidden;
-
     display: flex;
     align-items: center;
     gap: clamp(40px, 7vw, 100px);
-
     max-width: 1400px;
     min-height: 650px;
     margin: 0 auto;
@@ -956,11 +141,12 @@ nav ul li a.active {
 }
 
 .hero-image .profile-pic {
+    display: block;
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
     border-radius: 48% 48% 18px 18px;
-    border: 7px solid white;
+    border: 7px solid var(--white);
     box-shadow: 0 15px 35px rgba(51, 32, 57, 0.12);
 }
 
@@ -973,7 +159,7 @@ nav ul li a.active {
     font-weight: 700;
 }
 
-/* Biography */
+/* Hero Content */
 
 .hero-content {
     position: relative;
@@ -1004,10 +190,10 @@ nav ul li a.active {
 
 .hero-intro {
     color: var(--purple);
-    font-size: 1.35rem !important;
+    font-size: 1.35rem;
     font-weight: 700;
     line-height: 1.5;
-    margin-bottom: 22px !important;
+    margin-bottom: 22px;
 }
 
 .hero-content > p:not(.eyebrow) {
@@ -1016,7 +202,7 @@ nav ul li a.active {
     margin-bottom: 17px;
 }
 
-/* Decorative geometry */
+/* Decorative Shapes */
 
 .hero-decoration {
     position: absolute;
@@ -1052,21 +238,23 @@ nav ul li a.active {
     transform: rotate(15deg);
 }
 
-/* Bio links */
+/* Homepage Links */
 
 .bio-links {
     display: flex;
-    gap: 25px;
+    align-items: center;
     flex-wrap: wrap;
+    gap: 25px;
     margin-top: 30px;
 }
 
 .bio-links a {
+    color: var(--plum);
+    font-size: 1rem;
     font-weight: 800;
     text-decoration: none;
     padding-bottom: 5px;
     border-bottom: 3px solid var(--hot-pink);
-    color: var(--plum);
     transition: color 0.2s ease;
 }
 
@@ -1074,9 +262,7 @@ nav ul li a.active {
     color: var(--magenta);
 }
 
-/* ==========================================
-   WORK NAVIGATION
-========================================== */
+/* Work Navigation */
 
 .work-navigation {
     position: relative;
@@ -1108,7 +294,7 @@ nav ul li a.active {
     color: var(--plum);
 }
 
-/* Circular project buttons */
+/* Work Circles */
 
 .work-buttons {
     max-width: 1050px;
@@ -1126,18 +312,12 @@ nav ul li a.active {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     width: clamp(220px, 25vw, 290px);
     aspect-ratio: 1;
-
-    color: white;
+    color: var(--white);
     text-decoration: none;
-
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-/* Individual shapes */
 
 .circle-art {
     background: var(--tomato);
@@ -1156,8 +336,6 @@ nav ul li a.active {
     border-radius: 48% 42% 50% 45%;
     transform: rotate(-3deg);
 }
-
-/* Circle content */
 
 .circle-number {
     position: absolute;
@@ -1190,8 +368,6 @@ nav ul li a.active {
     font-weight: 700;
 }
 
-/* Hover effects */
-
 .work-circle:hover {
     transform: rotate(0deg) scale(1.08);
     box-shadow: 0 18px 35px rgba(51, 32, 57, 0.17);
@@ -1215,9 +391,7 @@ nav ul li a.active {
     margin-right: 5px;
 }
 
-/* ==========================================
-   CLOSING CONTACT SECTION
-========================================== */
+/* Closing Contact Section */
 
 .home-contact {
     position: relative;
@@ -1253,12 +427,11 @@ nav ul li a.active {
     padding: 15px 32px;
     border-radius: 50px;
     background: var(--plum);
-    color: white;
+    color: var(--white);
     text-decoration: none;
     font-size: 1rem;
     font-weight: 800;
-    transition: transform 0.2s ease,
-                background 0.2s ease;
+    transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .contact-button:hover {
@@ -1266,25 +439,446 @@ nav ul li a.active {
     transform: translateY(-4px);
 }
 
+
 /* ==========================================
-   FOOTER
+   4. ART & ANIMATION PORTFOLIO
+========================================== */
+
+.portfolio-main {
+    display: block;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 6%;
+}
+
+/* Portfolio Introduction */
+
+.portfolio-intro {
+    max-width: 850px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.portfolio-intro h1 {
+    color: var(--plum);
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    line-height: 1.2;
+    margin-bottom: 22px;
+    letter-spacing: -2px;
+}
+
+.portfolio-intro p {
+    color: var(--plum);
+    font-size: 1.05rem;
+    margin-bottom: 16px;
+}
+
+/* Project List */
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Project Cards */
+
+.art-project {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    padding: 30px;
+    background: #fffdf9;
+    border: 1px solid rgba(51, 32, 57, 0.08);
+    border-top: 6px solid var(--hot-pink);
+    border-radius: 24px;
+    box-shadow: 0 8px 25px rgba(51, 32, 57, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.art-project:nth-child(3n + 2) {
+    border-top-color: var(--orange);
+}
+
+.art-project:nth-child(3n) {
+    border-top-color: var(--purple);
+}
+
+.art-project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(51, 32, 57, 0.12);
+}
+
+/* Project Media */
+
+.project-media {
+    flex: 0 0 44%;
+    min-width: 0;
+}
+
+.project-media img,
+.project-media video {
+    display: block;
+    width: 100%;
+    max-height: 460px;
+    object-fit: contain;
+    border-radius: 16px;
+    background: #fbe4ed;
+}
+
+/* Project Information */
+
+.project-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.project-category {
+    color: var(--magenta);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.project-info h2 {
+    color: var(--plum);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+.project-info p {
+    color: var(--plum);
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+.project-info .project-tools {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 8px 15px;
+    background: #fbe4ed;
+    color: var(--magenta);
+    border-radius: 30px;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   5. COMPUTER SCIENCE PORTFOLIO
+========================================== */
+
+.cs-project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+/* Project Cards */
+
+.cs-project {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    padding: 32px;
+    background: #fffdf9;
+    border: 1px solid rgba(51, 32, 57, 0.08);
+    border-top: 5px solid var(--turquoise);
+    border-radius: 24px;
+    box-shadow: 0 8px 25px rgba(51, 32, 57, 0.06);
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cs-project:nth-child(3n + 2) {
+    border-top-color: var(--orange);
+}
+
+.cs-project:nth-child(3n) {
+    border-top-color: var(--hot-pink);
+}
+
+.cs-project:hover {
+    transform: translateY(-3px);
+    border-color: var(--hot-pink);
+    box-shadow: 0 14px 35px rgba(51, 32, 57, 0.12);
+}
+
+.cs-project:focus-visible {
+    outline: 3px solid var(--hot-pink);
+    outline-offset: 4px;
+}
+
+/* Project Icon */
+
+.cs-project-icon {
+    flex: 0 0 120px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--purple);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.cs-project:nth-child(3n + 2) .cs-project-icon {
+    background: var(--tomato);
+}
+
+.cs-project:nth-child(3n) .cs-project-icon {
+    background: var(--turquoise);
+}
+
+.cs-project-icon img {
+    display: block;
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+/* Project Information */
+
+.cs-project-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.cs-project-info .project-category {
+    color: var(--magenta);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin: 0 0 8px;
+}
+
+.cs-project-info h2 {
+    color: var(--plum);
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.cs-project-info > p:not(.project-category):not(.github-cta) {
+    color: var(--plum);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.cs-project-info .project-tools {
+    display: inline-block;
+    padding: 7px 12px;
+    background: #fbe4ed;
+    color: var(--magenta);
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+/* GitHub Link */
+
+.cs-project-info .github-cta {
+    display: block;
+    color: var(--magenta);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin: 0;
+    transition: color 0.2s ease;
+}
+
+.cs-project:hover .github-cta {
+    color: var(--hot-pink);
+}
+
+
+/* ==========================================
+   6. CONTACT PAGE
+========================================== */
+
+.contact-main {
+    flex: 1;
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.contact-card {
+    width: 100%;
+    max-width: 700px;
+    padding: 45px;
+    background: #fffdf9;
+    border: 1px solid rgba(51, 32, 57, 0.08);
+    border-top: 6px solid var(--hot-pink);
+    border-radius: 24px;
+    box-shadow: 0 12px 40px rgba(51, 32, 57, 0.08);
+    text-align: center;
+}
+
+.contact-card .eyebrow {
+    color: var(--magenta);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.contact-card h1 {
+    color: var(--plum);
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.contact-intro {
+    color: var(--plum);
+    margin-bottom: 30px;
+}
+
+/* Contact Information */
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.contact-item {
+    padding: 17px 10px;
+    border-bottom: 1px solid rgba(51, 32, 57, 0.12);
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-item h2 {
+    color: var(--magenta);
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+.contact-item p {
+    color: var(--plum);
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.contact-item a {
+    color: var(--magenta);
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: var(--hot-pink);
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   7. RESUME PAGE
+========================================== */
+
+.resume-main {
+    display: block;
+    padding: 45px 6%;
+}
+
+.resume-viewer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.resume-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.resume-toolbar h1 {
+    color: var(--plum);
+    font-size: 2.4rem;
+}
+
+.resume-download {
+    color: var(--magenta);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid var(--hot-pink);
+}
+
+.resume-pdf {
+    display: block;
+    width: 100%;
+    height: 85vh;
+    min-height: 600px;
+    border: none;
+    border-radius: 12px;
+    background: var(--cream);
+    box-shadow: 0 10px 35px rgba(51, 32, 57, 0.12);
+}
+
+
+/* ==========================================
+   8. FOOTER
 ========================================== */
 
 footer {
     background: var(--plum);
     color: var(--cream);
-    padding: 25px;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
 }
 
 footer span {
     color: var(--hot-pink);
 }
 
+
 /* ==========================================
-   RESPONSIVE HOMEPAGE
+   9. RESPONSIVE DESIGN
 ========================================== */
 
+/* Tablets */
+
 @media (max-width: 900px) {
+
+    /* Header */
+
+    .header-inner {
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 10px 18px;
+    }
+
+    /* Homepage */
 
     .home-hero {
         gap: 35px;
@@ -1311,9 +905,50 @@ footer span {
     .work-circle {
         width: 220px;
     }
+
+    /* Art Portfolio */
+
+    .portfolio-main {
+        padding: 40px 4%;
+    }
+
+    .art-project {
+        gap: 25px;
+        padding: 24px;
+    }
+
+    .project-media {
+        flex-basis: 42%;
+    }
+
+    /* Computer Science */
+
+    .cs-project {
+        gap: 24px;
+        padding: 24px;
+    }
+
+    .cs-project-icon {
+        flex-basis: 100px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .cs-project-icon img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .cs-project-info h2 {
+        font-size: 1.6rem;
+    }
 }
 
+/* Mobile */
+
 @media (max-width: 650px) {
+
+    /* Header */
 
     .site-header {
         position: relative;
@@ -1333,6 +968,8 @@ footer span {
     nav ul li a {
         font-size: 0.82rem;
     }
+
+    /* Homepage */
 
     .home-hero {
         flex-direction: column;
@@ -1358,7 +995,7 @@ footer span {
     }
 
     .hero-intro {
-        font-size: 1.15rem !important;
+        font-size: 1.15rem;
     }
 
     .hero-content > p:not(.eyebrow) {
@@ -1419,11 +1056,120 @@ footer span {
         right: 2%;
         font-size: 65px;
     }
+
+    /* Art Portfolio */
+
+    .portfolio-main {
+        padding: 30px 16px;
+    }
+
+    .portfolio-intro {
+        margin-bottom: 35px;
+    }
+
+    .portfolio-intro h1 {
+        font-size: 2.4rem;
+    }
+
+    .portfolio-intro p {
+        font-size: 0.98rem;
+    }
+
+    .project-list {
+        gap: 22px;
+    }
+
+    .art-project {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 22px;
+        padding: 18px;
+    }
+
+    .project-media {
+        flex: auto;
+        width: 100%;
+    }
+
+    .project-media img,
+    .project-media video {
+        max-height: 400px;
+    }
+
+    .project-info h2 {
+        font-size: 1.7rem;
+    }
+
+    /* Computer Science */
+
+    .cs-project {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 22px;
+    }
+
+    .cs-project-icon {
+        flex: 0 0 85px;
+        width: 85px;
+        height: 85px;
+    }
+
+    .cs-project-icon img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .cs-project-info {
+        width: 100%;
+    }
+
+    .cs-project-info h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Contact Page */
+
+    .contact-main {
+        padding: 25px 15px;
+    }
+
+    .contact-card {
+        padding: 28px 20px;
+    }
+
+    .contact-card h1 {
+        font-size: 2rem;
+    }
+
+    /* Resume */
+
+    .resume-main {
+        padding: 30px 16px;
+    }
+
+    .resume-toolbar h1 {
+        font-size: 2rem;
+    }
+
+    .resume-pdf {
+        height: 70vh;
+        min-height: 450px;
+    }
 }
 
-/* Respect reduced motion preferences */
+/* Alternate project layout on desktop */
+
+@media (min-width: 900px) {
+    .art-project:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+}
+
+/* Reduced Motion */
 
 @media (prefers-reduced-motion: reduce) {
+
     html {
         scroll-behavior: auto;
     }
@@ -1436,126 +1182,3 @@ footer span {
     }
 }
 
-
-/* ==========================================
-   COLORFUL PROJECT CARDS
-========================================== */
-
-.art-project,
-.cs-project {
-    position: relative;
-    overflow: hidden;
-    background: #fffdf9;
-    border: 1px solid rgba(51, 32, 57, 0.08);
-    border-radius: 24px;
-    box-shadow: 0 8px 25px rgba(51, 32, 57, 0.06);
-}
-
-.art-project {
-    border-top: 6px solid var(--hot-pink);
-}
-
-.art-project:nth-child(3n + 2) {
-    border-top-color: var(--orange);
-}
-
-.art-project:nth-child(3n) {
-    border-top-color: var(--purple);
-}
-
-.art-project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(51, 32, 57, 0.12);
-}
-
-.project-media img,
-.project-media video {
-    border-radius: 16px;
-    background: #fbe4ed;
-}
-
-.project-category {
-    color: var(--magenta);
-    letter-spacing: 2px;
-}
-
-.project-info h2,
-.cs-project-info h2 {
-    color: var(--plum);
-}
-
-.project-info .project-tools,
-.cs-project-info .project-tools {
-    background: #fbe4ed;
-    color: var(--magenta);
-    border-radius: 30px;
-    padding: 8px 15px;
-}
-
-/* Computer Science cards */
-
-.cs-project {
-    border-top: 5px solid var(--turquoise);
-    padding: 32px;
-}
-
-.cs-project:nth-child(3n + 2) {
-    border-top-color: var(--orange);
-}
-
-.cs-project:nth-child(3n) {
-    border-top-color: var(--hot-pink);
-}
-
-.cs-project-icon {
-    background: var(--purple);
-    border-radius: 50%;
-}
-
-.cs-project:nth-child(3n + 2) .cs-project-icon {
-    background: var(--tomato);
-}
-
-.cs-project:nth-child(3n) .cs-project-icon {
-    background: var(--turquoise);
-}
-
-.cs-project:hover {
-    border-color: var(--hot-pink);
-    border-top-color: var(--hot-pink);
-}
-
-.cs-project-info .github-cta {
-    color: var(--magenta);
-}
-
-/* Project page headings */
-
-.portfolio-intro h1 {
-    color: var(--plum);
-    letter-spacing: -2px;
-}
-
-.portfolio-intro p {
-    color: var(--plum);
-}
-
-/* Contact page */
-
-.contact-card {
-    border-radius: 24px;
-    border-top: 6px solid var(--hot-pink);
-}
-
-.contact-card h1 {
-    color: var(--plum);
-}
-
-.contact-item h2 {
-    color: var(--magenta);
-}
-@media (min-width: 900px) {
-    .art-project:nth-child(even) {
-        flex-direction: row-reverse;
-    }
-}
