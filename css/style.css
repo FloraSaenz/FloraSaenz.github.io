@@ -843,3 +843,719 @@ footer span {
     background: #faf0e6;
     box-shadow: 0 10px 35px rgba(49, 20, 50, 0.12);
 }
+
+
+/* ==========================================
+   NEW HOMEPAGE: PLAYFUL GEOMETRIC PORTFOLIO
+========================================== */
+
+/* Color palette */
+
+:root {
+    --cream: #fff6e9;
+    --plum: #332039;
+    --tomato: #f04438;
+    --coral: #ff725e;
+    --hot-pink: #f04b9b;
+    --magenta: #b52b91;
+    --purple: #7136a8;
+    --orange: #ff9638;
+    --yellow: #ffd447;
+    --turquoise: #39c6c2;
+    --cobalt: #4267d5;
+}
+
+/* Overall page */
+
+body {
+    background-color: var(--cream);
+    color: var(--plum);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--cream);
+    color: var(--plum);
+    padding: 18px 6%;
+    border-bottom: 2px solid rgba(51, 32, 57, 0.08);
+}
+
+.header-inner {
+    max-width: 1400px;
+}
+
+.site-title {
+    color: var(--plum);
+    font-size: 1.7rem;
+    font-weight: 800;
+}
+
+.site-title span {
+    color: var(--tomato);
+}
+
+nav ul {
+    gap: 10px 25px;
+}
+
+nav ul li a {
+    color: var(--plum);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--hot-pink);
+}
+
+/* ==========================================
+   HOMEPAGE LAYOUT
+========================================== */
+
+.home-main {
+    display: block;
+    width: 100%;
+    padding: 0;
+    flex: 1;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.home-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    gap: clamp(40px, 7vw, 100px);
+
+    max-width: 1400px;
+    min-height: 650px;
+    margin: 0 auto;
+    padding: 90px 8%;
+}
+
+/* Portrait */
+
+.hero-image {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 36%;
+    max-width: 390px;
+}
+
+.hero-image .profile-pic {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 48% 48% 18px 18px;
+    border: 7px solid white;
+    box-shadow: 0 15px 35px rgba(51, 32, 57, 0.12);
+}
+
+.image-caption {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: var(--purple);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* Biography */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    max-width: 680px;
+}
+
+.eyebrow {
+    color: var(--magenta);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    color: var(--plum);
+    font-size: clamp(3.8rem, 7vw, 6rem);
+    line-height: 0.98;
+    letter-spacing: -4px;
+    margin-bottom: 25px;
+}
+
+.title-dot {
+    color: var(--tomato);
+}
+
+.hero-intro {
+    color: var(--purple);
+    font-size: 1.35rem !important;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 22px !important;
+}
+
+.hero-content > p:not(.eyebrow) {
+    font-size: 0.98rem;
+    line-height: 1.9;
+    margin-bottom: 17px;
+}
+
+/* Decorative geometry */
+
+.hero-decoration {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-circle-one {
+    width: 190px;
+    height: 190px;
+    background: var(--yellow);
+    border-radius: 50%;
+    top: 45px;
+    left: 1%;
+    opacity: 0.65;
+}
+
+.hero-circle-two {
+    width: 115px;
+    height: 115px;
+    background: var(--hot-pink);
+    border-radius: 50%;
+    bottom: 55px;
+    left: 36%;
+    opacity: 0.65;
+}
+
+.hero-star {
+    color: var(--orange);
+    font-size: 110px;
+    top: 65px;
+    right: 5%;
+    transform: rotate(15deg);
+}
+
+/* Bio links */
+
+.bio-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.bio-links a {
+    font-weight: 800;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 3px solid var(--hot-pink);
+    color: var(--plum);
+    transition: color 0.2s ease;
+}
+
+.bio-links a:hover {
+    color: var(--magenta);
+}
+
+/* ==========================================
+   WORK NAVIGATION
+========================================== */
+
+.work-navigation {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 6% 85px;
+    background: #fbe4ed;
+    text-align: center;
+}
+
+.work-heading {
+    max-width: 750px;
+    margin: 0 auto 55px;
+}
+
+.work-heading h2 {
+    color: var(--plum);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    letter-spacing: -2px;
+    line-height: 1.15;
+    margin-bottom: 15px;
+}
+
+.work-heading h2 span {
+    color: var(--orange);
+}
+
+.work-heading > p:last-child {
+    font-size: 1.05rem;
+    color: var(--plum);
+}
+
+/* Circular project buttons */
+
+.work-buttons {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(25px, 5vw, 75px);
+    flex-wrap: wrap;
+}
+
+.work-circle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: clamp(220px, 25vw, 290px);
+    aspect-ratio: 1;
+
+    color: white;
+    text-decoration: none;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Individual shapes */
+
+.circle-art {
+    background: var(--tomato);
+    border-radius: 50% 45% 48% 43%;
+    transform: rotate(-5deg);
+}
+
+.circle-film {
+    background: var(--purple);
+    border-radius: 45% 50% 43% 50%;
+    transform: rotate(5deg);
+}
+
+.circle-cs {
+    background: var(--orange);
+    border-radius: 48% 42% 50% 45%;
+    transform: rotate(-3deg);
+}
+
+/* Circle content */
+
+.circle-number {
+    position: absolute;
+    top: 22%;
+    left: 22%;
+    font-size: 0.8rem;
+    font-weight: 800;
+    opacity: 0.8;
+}
+
+.circle-symbol {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.circle-title {
+    font-size: 1.65rem;
+    line-height: 1.15;
+    font-weight: 800;
+    text-align: center;
+}
+
+.circle-arrow {
+    position: absolute;
+    right: 22%;
+    bottom: 19%;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Hover effects */
+
+.work-circle:hover {
+    transform: rotate(0deg) scale(1.08);
+    box-shadow: 0 18px 35px rgba(51, 32, 57, 0.17);
+}
+
+.work-circle:focus-visible {
+    outline: 4px solid var(--plum);
+    outline-offset: 7px;
+}
+
+.work-footer-note {
+    margin-top: 65px;
+    color: var(--plum);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.work-footer-note span {
+    color: var(--magenta);
+    font-size: 1.3rem;
+    margin-right: 5px;
+}
+
+/* ==========================================
+   CLOSING CONTACT SECTION
+========================================== */
+
+.home-contact {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 100px 20px 110px;
+    background: var(--yellow);
+}
+
+.home-contact h2 {
+    color: var(--plum);
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 35px;
+}
+
+.home-contact .eyebrow {
+    color: var(--magenta);
+}
+
+.contact-decoration {
+    position: absolute;
+    top: 20px;
+    right: 12%;
+    font-size: 100px;
+    color: var(--tomato);
+    transform: rotate(15deg);
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 15px 32px;
+    border-radius: 50px;
+    background: var(--plum);
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 800;
+    transition: transform 0.2s ease,
+                background 0.2s ease;
+}
+
+.contact-button:hover {
+    background: var(--magenta);
+    transform: translateY(-4px);
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+    background: var(--plum);
+    color: var(--cream);
+    padding: 25px;
+}
+
+footer span {
+    color: var(--hot-pink);
+}
+
+/* ==========================================
+   RESPONSIVE HOMEPAGE
+========================================== */
+
+@media (max-width: 900px) {
+
+    .home-hero {
+        gap: 35px;
+        padding: 70px 5%;
+    }
+
+    .hero-image {
+        flex-basis: 35%;
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .hero-circle-one {
+        width: 120px;
+        height: 120px;
+    }
+
+    .work-buttons {
+        gap: 25px;
+    }
+
+    .work-circle {
+        width: 220px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .site-header {
+        position: relative;
+        padding: 18px 5%;
+    }
+
+    .header-inner {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 12px 17px;
+    }
+
+    nav ul li a {
+        font-size: 0.82rem;
+    }
+
+    .home-hero {
+        flex-direction: column;
+        padding: 55px 25px 75px;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 75%;
+        max-width: 280px;
+        flex: auto;
+    }
+
+    .hero-image .profile-pic {
+        aspect-ratio: 1;
+        border-radius: 50%;
+    }
+
+    .hero-content h1 {
+        font-size: 3.8rem;
+        letter-spacing: -2px;
+    }
+
+    .hero-intro {
+        font-size: 1.15rem !important;
+    }
+
+    .hero-content > p:not(.eyebrow) {
+        font-size: 0.95rem;
+    }
+
+    .bio-links {
+        justify-content: center;
+    }
+
+    .hero-circle-one {
+        top: 20px;
+        left: -35px;
+    }
+
+    .hero-circle-two {
+        bottom: 20px;
+        left: auto;
+        right: -30px;
+    }
+
+    .hero-star {
+        font-size: 65px;
+        top: 20px;
+        right: 5%;
+    }
+
+    .work-navigation {
+        padding: 75px 20px;
+    }
+
+    .work-heading {
+        margin-bottom: 40px;
+    }
+
+    .work-heading h2 {
+        font-size: 2.7rem;
+    }
+
+    .work-buttons {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .work-circle {
+        width: 240px;
+    }
+
+    .home-contact {
+        padding: 80px 20px;
+    }
+
+    .home-contact h2 {
+        font-size: 3.5rem;
+    }
+
+    .contact-decoration {
+        right: 2%;
+        font-size: 65px;
+    }
+}
+
+/* Respect reduced motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+
+/* ==========================================
+   COLORFUL PROJECT CARDS
+========================================== */
+
+.art-project,
+.cs-project {
+    position: relative;
+    overflow: hidden;
+    background: #fffdf9;
+    border: 1px solid rgba(51, 32, 57, 0.08);
+    border-radius: 24px;
+    box-shadow: 0 8px 25px rgba(51, 32, 57, 0.06);
+}
+
+.art-project {
+    border-top: 6px solid var(--hot-pink);
+}
+
+.art-project:nth-child(3n + 2) {
+    border-top-color: var(--orange);
+}
+
+.art-project:nth-child(3n) {
+    border-top-color: var(--purple);
+}
+
+.art-project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(51, 32, 57, 0.12);
+}
+
+.project-media img,
+.project-media video {
+    border-radius: 16px;
+    background: #fbe4ed;
+}
+
+.project-category {
+    color: var(--magenta);
+    letter-spacing: 2px;
+}
+
+.project-info h2,
+.cs-project-info h2 {
+    color: var(--plum);
+}
+
+.project-info .project-tools,
+.cs-project-info .project-tools {
+    background: #fbe4ed;
+    color: var(--magenta);
+    border-radius: 30px;
+    padding: 8px 15px;
+}
+
+/* Computer Science cards */
+
+.cs-project {
+    border-top: 5px solid var(--turquoise);
+    padding: 32px;
+}
+
+.cs-project:nth-child(3n + 2) {
+    border-top-color: var(--orange);
+}
+
+.cs-project:nth-child(3n) {
+    border-top-color: var(--hot-pink);
+}
+
+.cs-project-icon {
+    background: var(--purple);
+    border-radius: 50%;
+}
+
+.cs-project:nth-child(3n + 2) .cs-project-icon {
+    background: var(--tomato);
+}
+
+.cs-project:nth-child(3n) .cs-project-icon {
+    background: var(--turquoise);
+}
+
+.cs-project:hover {
+    border-color: var(--hot-pink);
+    border-top-color: var(--hot-pink);
+}
+
+.cs-project-info .github-cta {
+    color: var(--magenta);
+}
+
+/* Project page headings */
+
+.portfolio-intro h1 {
+    color: var(--plum);
+    letter-spacing: -2px;
+}
+
+.portfolio-intro p {
+    color: var(--plum);
+}
+
+/* Contact page */
+
+.contact-card {
+    border-radius: 24px;
+    border-top: 6px solid var(--hot-pink);
+}
+
+.contact-card h1 {
+    color: var(--plum);
+}
+
+.contact-item h2 {
+    color: var(--magenta);
+}
+@media (min-width: 900px) {
+    .art-project:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+}

@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Flora Saenz's personal portfolio showcasing art, film, and computer science.">
-    <title>Flora Saenz | Home</title>
+    <title>Flora Saenz | Creative Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -12,16 +13,12 @@
 
 <header class="site-header">
     <div class="header-inner">
-        <a href="index.html" class="site-title">Flora Saenz</a>
+        <a href="index.html" class="site-title">Flora Saenz<span>.</span></a>
 
         <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
-                <li>
-                    <a href="pdf/Flora_Resume_2026.pdf" target="_blank">
-                        Resume
-                    </a>
-                </li>
+                <li><a href="pdf/FloraSaenz_Resume_26.pdf" target="_blank" rel="noopener noreferrer">Resume ↗</a></li>
                 <li><a href="animation.html">Art & Animation</a></li>
                 <li><a href="film.html">Film</a></li>
                 <li><a href="csci.html">Computer Science</a></li>
@@ -31,61 +28,147 @@
     </div>
 </header>
 
-<main>
-    <section class="bio-section">
-        <div class="bio-image">
+<main class="home-main">
+
+    <!-- HERO / BIOGRAPHY -->
+
+    <section class="home-hero">
+
+        <div class="hero-decoration hero-circle-one"></div>
+        <div class="hero-decoration hero-circle-two"></div>
+        <div class="hero-decoration hero-star">✳</div>
+
+        <div class="hero-image">
             <img
                 src="images/FS_ProfilePicture.jpg"
-                alt="Portrait of Flora Saenz"
+                alt="Flora Saenz"
                 class="profile-pic"
             >
+            <span class="image-caption">I do a little bit of everything!</span>
         </div>
 
-        <div class="bio-content">
+        <div class="hero-content">
 
-            <h1>Hello, I'm Flora.</h1>
+            <p class="eyebrow">ARTIST · FILMMAKER · DEVELOPER</p>
+
+            <h1>
+                Hello,<br>
+                I'm Flora<span class="title-dot">!</span>
+            </h1>
 
             <p>
-                After earning my bachelor's degree in 3D Animation &amp; VFX
-                with a minor in Digital Filmmaking, I began my journey as a 
-                Computer Science master's student. I'm working to expand my
-                technical expertise and bring together my passions for
-                artistic creativity and technology.
+                After earning my bachelor's degree in 3D Animation
+                & VFX with a minor in Digital Filmmaking, I began
+                my journey as a Computer Science master's student.
+                I'm working to expand my technical expertise while
+                bringing together my passions for artistic creativity
+                and technology.
             </p>
 
             <p>
-                I am interested on any field where I can use a creative outlook 
-                to build a technical solution. Currently my main interests are UI/UX design, 
-                software development, game development, and web development. On a solely technical aspect, I am interested 
-                in Machine Learning; and on that same note, my artistic professional interests are 
-                content creation, digital illustration, video editing, and 3D animation with a specific focus on UV textures, 
+                I'm interested in creative solutions through UI/UX
+                design, software development, game development,
+                and web development. My artistic interests include
+                digital illustration, content creation, video editing,
+                and 3D animation, particularly UV texturing,
                 lighting, and animation.
-
             </p>
 
             <p>
-                This website is a collection of my work
-                from digital art and film to programming projects.
-                Explore my work and discover what I'm creating!
+                This portfolio is a collection of the things I've
+                created, the things I've learned, and the things
+                I'm still experimenting with.
             </p>
 
             <div class="bio-links">
                 <a href="contact.html" class="contact-link">
-                    Get in touch &rarr;
+                    Let's talk ↗
                 </a>
-
-                <a
-                    href="pdf/Flora_Resume_2026.pdf"
-                    target="_blank"
-                    class="resume-link"
-                >
-                    View my resume &rarr;
+                <a href="pdf/FloraSaenz_Resume_26.pdf"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="resume-link">
+                    View resume ↗
                 </a>
             </div>
+
         </div>
+
     </section>
+
+
+    <!-- PORTFOLIO NAVIGATION -->
+
+    <section class="work-navigation" id="my-work">
+
+        <div class="work-heading">
+            <p class="eyebrow">A COLLECTION OF MY WORK</p>
+            <h2>Explore my universe<span> ✳</span></h2>
+            <p>
+                A little art, a little technology, and a lot of curiosity.
+                Take a look around!
+            </p>
+        </div>
+
+        <div class="work-buttons">
+
+            <a href="animation.html"
+               class="work-circle circle-art">
+
+               
+                <span class="circle-symbol">✿</span>
+                <span class="circle-title">Art &<br>Animation</span>
+               
+
+            </a>
+
+            <a href="film.html"
+               class="work-circle circle-film">
+
+           
+                <span class="circle-symbol">✳</span>
+                <span class="circle-title">Film &<br>Storytelling</span>
+               
+
+            </a>
+
+            <a href="csci.html"
+               class="work-circle circle-cs">
+
+                <span class="circle-symbol">&lt;/&gt;</span>
+                <span class="circle-title">Computer<br>Science</span>
+               
+            </a>
+
+        </div>
+
+        <div class="work-footer-note">
+            <span></span> Different mediums, same creative mindset!
+        </div>
+
+    </section>
+
+
+    <!-- CLOSING SECTION -->
+
+    <section class="home-contact">
+
+        <div class="contact-decoration">✳</div>
+
+
+        <h2>Let's make<br>something cool together.</h2>
+
+        <a href="contact.html" class="contact-button">
+            Get in touch 
+        </a>
+
+    </section>
+
 </main>
 
+<footer>
+    <p><span>✿</span></p>
+</footer>
 
 </body>
 </html>
