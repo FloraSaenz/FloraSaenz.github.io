@@ -1741,3 +1741,78 @@ footer span {
         margin: 0 auto;
     }
 }
+
+
+/* ==========================================
+   CSCI PROJECT ACTION BUTTONS
+========================================== */
+
+.project-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 22px;
+}
+
+.project-actions a {
+    display: inline-block;
+    padding: 11px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: background 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+}
+
+/* Explore Features Button */
+
+.project-actions .gallery-button {
+    background: var(--plum);
+    color: white;
+    border: 2px solid var(--plum);
+}
+
+.project-actions .gallery-button:hover {
+    background: var(--magenta);
+    border-color: var(--magenta);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* GitHub Button */
+
+.project-actions .github-button {
+    background: transparent;
+    color: var(--plum);
+    border: 2px solid var(--plum);
+}
+
+.project-actions .github-button:hover {
+    background: var(--plum);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Keyboard accessibility */
+
+.project-actions a:focus-visible {
+    outline: 3px solid var(--hot-pink);
+    outline-offset: 4px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .project-actions {
+        gap: 12px;
+    }
+
+    .project-actions a {
+        text-align: center;
+    }
+
+}
